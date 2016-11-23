@@ -1,0 +1,97 @@
+#sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  opacity: 0;
+  visibility: hidden;
+  background: $color5;
+  box-shadow: -3px 0 30px rgba(0,0,0,0.3);
+  transition: all 175ms ease-in;
+  padding: 0 20px;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+    transition: all 175ms ease-out;
+  }
+
+  .close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    box-shadow: -7px 7px 15px -3px rgba(0,0,0,0.3);
+    left: -50px;
+    background: $color5;
+    cursor: pointer;
+    border-radius: 0 0 0 5px;
+    transition: all 150ms ease-in-out;
+    &:hover {
+      svg path {
+        fill: $color3;
+      }
+    }
+    svg path {
+      fill: $color4;
+      transition: all 150ms ease-in-out;
+    }
+  }
+
+  .favourite {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 50px;
+    background: $color1;
+    color: $color5;
+    width: calc(100% - 40px);
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px 0;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    transition: all 150ms ease;
+    &.remove {
+      background: $color3;
+      &:hover {
+        background: darken($color3, 10%);
+      }
+      &:focus {
+        outline: 0;
+        border-color: darken($color3, 15%);
+      }
+    }
+    &:hover {
+      background: darken($color1, 10%);
+    }
+    &:focus {
+      outline: 0;
+      border-color: darken($color1, 15%);
+    }
+  }
+
+  .color {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    .example {
+      height: 100px;
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      @media(max-height: 780px) {
+        height: 50px;
+      }
+    }
+    .hex, .rgb {
+      text-transform: uppercase;
+      span {
+        font-size: 0.8rem;
+        color: lighten($color4, 20%);
+      }
+    }
+  }
+}
