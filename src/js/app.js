@@ -211,13 +211,14 @@ var removeFavourite = function() {
     var favouriteId = '' + $('#removeFavourite').attr('value');
     var currentStorage = localStorage.getItem('palettes');
     var currentStorageArray = currentStorage.split(',');
+    var favouriteButton = $('#favourite');
     currentStorageArray = $.grep(currentStorageArray, function(value) {
       return value !== favouriteId;
     });
     var newStorage = currentStorageArray;
     localStorage.setItem('palettes', newStorage);
     content.empty();
-    sidebarContainer.removeClass('active');
+    // sidebarContainer.removeClass('active');
     // Detect favourite page
     if(content.hasClass('favourites')) {
       loadFavourites();
@@ -230,6 +231,8 @@ var removeFavourite = function() {
     setTimeout(function(){
       $('.alert').remove();
     }, 3000);
+    favouriteButton.remove();
+    sidebarContainer.append('<button id="favourite" class="favourite" value="'+favouriteId+'">+ Add favourite</button>');
   });
 };
 
