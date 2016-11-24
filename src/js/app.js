@@ -185,12 +185,16 @@ var changeBgColor = function() {
 var favourite = function() {
   var body = $('body');
   body.on('click', '#favourite', function(){
+    var favouriteButton = $('#favourite');
+    var sidebarContainer = $('.sidebar');
     var favouriteId = $('#favourite').attr('value');
     var currentStorage = localStorage.getItem('palettes');
     localStorage.setItem('palettes', currentStorage + favouriteId + ',');
     // Show msg
     $('.alert').remove();
     $('<div style="display: none;" class="alert success">Palette saved!</div>').appendTo(body).slideDown("fast");
+    favouriteButton.remove();
+    sidebarContainer.append('<button id="removeFavourite" class="favourite remove" value="'+favouriteId+'">Remove favourite</button>');
     setTimeout(function(){
       $('.alert').remove();
     }, 3000);
@@ -220,8 +224,6 @@ var removeFavourite = function() {
     } else {
       loadColors();
     }
-
-
     // Show msg
     $('.alert').remove();
     $('<div style="display: none;" class="alert error">Palette error!</div>').appendTo(body).slideDown("fast");
