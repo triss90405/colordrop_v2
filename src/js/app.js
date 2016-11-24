@@ -227,7 +227,7 @@ var removeFavourite = function() {
     }
     // Show msg
     $('.alert').remove();
-    $('<div style="display: none;" class="alert error">Palette error!</div>').appendTo(body).slideDown("fast");
+    $('<div style="display: none;" class="alert error">Palette removed from favourites</div>').appendTo(body).slideDown("fast");
     setTimeout(function(){
       $('.alert').remove();
     }, 3000);
