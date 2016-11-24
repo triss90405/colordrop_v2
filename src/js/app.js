@@ -217,13 +217,13 @@ var removeFavourite = function() {
     });
     var newStorage = currentStorageArray;
     localStorage.setItem('palettes', newStorage);
-    content.empty();
     // sidebarContainer.removeClass('active');
     // Detect favourite page
     if(content.hasClass('favourites')) {
+      content.empty();
       loadFavourites();
     } else {
-      loadColors();
+      //loadColors();
     }
     // Show msg
     $('.alert').remove();
