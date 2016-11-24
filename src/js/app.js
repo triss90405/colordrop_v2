@@ -93,9 +93,13 @@ var sidebar = function() {
     sidebarContainer.find('.favourite').remove();
     changeBgColor.removeClass('active');
     sidebarContainer.addClass('active');
+    var favouriteColors = localStorage.getItem('palettes');
     // Detect favourite page
     if(content.hasClass('favourites')) {
       sidebarContainer.append('<button id="removeFavourite" class="favourite remove" value="'+id+'">Remove favourite</button>');
+    } else if(favouriteColors.indexOf(id) !== -1) {
+      sidebarContainer.append('<button id="removeFavourite" class="favourite remove" value="'+id+'">Remove favourite</button>');
+      loadColors();
     } else {
       sidebarContainer.append('<button id="favourite" class="favourite" value="'+id+'">+ Add favourite</button>');
     }
@@ -210,7 +214,14 @@ var removeFavourite = function() {
     localStorage.setItem('palettes', newStorage);
     content.empty();
     sidebarContainer.removeClass('active');
-    loadFavourites();
+    // Detect favourite page
+    if(content.hasClass('favourites')) {
+      loadFavourites();
+    } else {
+      loadColors();
+    }
+
+
     // Show msg
     $('.alert').remove();
     $('<div style="display: none;" class="alert error">Palette error!</div>').appendTo(body).slideDown("fast");
