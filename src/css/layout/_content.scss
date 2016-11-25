@@ -1,5 +1,6 @@
 #content {
   width: calc(100vw - 200px);
+  min-height: 100vh;
   position: relative;
   left: 200px;
   transition: all 200ms ease;
@@ -37,5 +38,17 @@
   }
   &.black {
     background: #19191a;
+  }
+
+  &.about {
+    padding: 50px;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 2.3rem;
+    }
   }
 }

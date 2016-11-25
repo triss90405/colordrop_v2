@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25444",
 "files": {
+	"\/about\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/about\/index.html",
+		"oF": 0
+		},
 	"\/assets\/img\/android-chrome-144x144.png": {
 		"ft": 32768,
 		"iS": 12136,
