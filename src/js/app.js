@@ -189,6 +189,9 @@ var favourite = function() {
     var sidebarContainer = $('.sidebar');
     var favouriteId = $('#favourite').attr('value');
     var currentStorage = localStorage.getItem('palettes');
+    if(!currentStorage) {
+      currentStorage = "";
+    }
     localStorage.setItem('palettes', currentStorage + favouriteId + ',');
     // Show msg
     $('.alert').remove();
