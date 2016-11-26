@@ -99,9 +99,11 @@ var sidebar = function() {
       sidebarContainer.append('<button id="favourite" class="favourite" value="'+id+'">+ Add favourite</button>');
     } else if (favouriteColors.indexOf(id) !== -1) {
       sidebarContainer.append('<button id="removeFavourite" class="favourite remove" value="'+id+'">Remove favourite</button>');
-      loadColors();
     } else {
       sidebarContainer.append('<button id="favourite" class="favourite" value="'+id+'">+ Add favourite</button>');
+    }
+    if (content.hasClass('favourites')) {
+      loadColors();
     }
   });
   // Close sidebar (esc key)
