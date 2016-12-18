@@ -7,7 +7,7 @@
 		"uuidString": "0240225F-F7DA-45A6-9974-12B209EFF556"
 		}
 	],
-"creatorBuild": "25444",
+"creatorBuild": "25479",
 "files": {
 	"\/about\/index.html": {
 		"ft": 8192,
@@ -306,21 +306,21 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/dist\/css\/styles-min.css",
 		"oF": 0,
 		"oS": 0
 		},
 	"\/dist\/css\/styles.css.map": {
 		"ft": 8192,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/dist\/css\/styles.css.map",
 		"oF": 0
 		},
 	"\/dist\/js\/app-min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/dist\/js\/app-min-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -329,7 +329,7 @@
 	"\/dist\/js\/jquery-3.1.1-min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/dist\/js\/jquery-3.1.1-min-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -630,14 +630,14 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/dist\/js\/app-min.js",
-		"oF": 2,
+		"oF": 3,
 		"sC": 1,
 		"tS": 0
 		},
 	"\/src\/js\/jquery-3.1.1.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/dist\/js\/jquery-3.1.1-min.js",
 		"oF": 3,
 		"sC": 0,
@@ -908,7 +908,7 @@
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
 	"buildFolderActive": 0,
-	"buildFolderName": "build",
+	"buildFolderName": "src",
 	"cleanBuild": 1,
 	"coffeeLintFlags2": {
 		"arrow_spacing": {
@@ -1096,6 +1096,10 @@
 			"active": 0,
 			"optionString": "{'properties': 'always'}"
 			},
+		"capitalized-comments": {
+			"active": 0,
+			"optionString": "'always', {'ignoreInlineComments': false, 'ignoreConsecutiveComments': false}"
+			},
 		"class-methods-use-this": {
 			"active": 0,
 			"optionString": "{'exceptMethods': []}"
@@ -1259,6 +1263,10 @@
 		"max-statements": {
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"max-statements-per-line": {
+			"active": 0,
+			"optionString": "{'max': 1}"
 			},
 		"multiline-ternary": {
 			"active": 0,
@@ -1624,6 +1632,10 @@
 			"active": 0,
 			"optionString": "'except-parens'"
 			},
+		"no-return-await": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-script-url": {
 			"active": 0,
 			"optionString": ""
@@ -1855,6 +1867,10 @@
 		"radix": {
 			"active": 0,
 			"optionString": "'always'"
+			},
+		"require-await": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-jsdoc": {
 			"active": 0,
@@ -2547,7 +2563,7 @@
 		],
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
-	"sourceFolderName": "source",
+	"sourceFolderName": "dist",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
@@ -2688,6 +2704,10 @@
 			},
 		"space-colon": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"support-ie8": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"toplevel": {
